@@ -35,5 +35,5 @@ This is my first big project that I have genuinely given my time and thoughts, b
 From the importance to data in today's fast moving world to the impact it holds on our lives, I learned everything including various concepts of data science and new machine learning models.
 
 # Built With
-Python
+Python and
 Jupyter Notebook
