@@ -1,7 +1,7 @@
 # The-Data-Science-Challenge
 I came across this project through a college senior, who is currently guiding me in learning Data Science. Do visit his GitHub profile: https://github.com/ShubhankSinghal.
 
-Inspiration
+# Inspiration
 This project is a part of Internshala Data Science competition.
 
 Problem Statement: https://drive.google.com/file/d/16_AE8GsEucPS4XEX007xoVAa-J6_FvFD/view?usp=sharing
