@@ -16,11 +16,17 @@ def ValuePredictor(to_predict_list):
 @app.route("/predict",methods = ["POST"])
 def result():
  if request.method == "POST":
-    to_predict_list = request.form.to_dict()
-    to_predict_list=list(to_predict_list.values())
-    to_predict_list = list(map(float, to_predict_list))
-    result = ValuePredictor(to_predict_list)
-    prediction = str(result)
+   perc = request.form.get('perc')
+   age = request.form.get('age')
+   income = request.form.get('income')
+   c1 = request.form.get('c1')
+   c2 = request.form.get('c2')
+   c3 = request.form.get('c3')
+   auc = request.form.get('auc')
+   num = request.form.get('num')
+   s_channel = request.form.get('s_channel')
+   residence = request.form.get('residence')
+   prediction = [perc, age, income, c1, c2, c3, auc, num, s_channel, residence]
  return render_template("predict.html",prediction=prediction)
 if __name__ == "__main__":
  app.run(debug=True)

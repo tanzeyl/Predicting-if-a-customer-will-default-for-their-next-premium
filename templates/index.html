@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Premium Payment Prediction</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
 </head>
 <body>
 	<div class="header">
@@ -23,7 +23,6 @@
                     				<th>Field </th>
                     				<th> Input</th>
                 				</tr>
-                				<tr><td>Name</td><td><input type="text" name="First Name" placeholder="First Name"><input type="text" name="Last Name" placeholder="Last Name"></td></tr>
                 				<tr><td>Percentage of Premium Paid by Cash</td><td><input type="text" name="perc"></td></tr>
                 				<tr><td>Age In Days</td><td><input type="text" name="age"></td></tr>
                 				<tr><td>Income</td><td><input type="text" name="income" placeholder="Please refrain from commas"></td></tr>
