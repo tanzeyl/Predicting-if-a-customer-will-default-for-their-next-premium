@@ -99,6 +99,7 @@ input {
 @media (min-width: 320px) {
     .container_main {
         width: 320px;
+        height: auto;
     }
 }
 @media (min-width: 481px) {
