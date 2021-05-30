@@ -97,27 +97,27 @@ input {
     overflow-x: hidden;
 }
 @media (min-width: 320px) {
-    .container {
+    .container_main {
         width: 320px;
     }
 }
 @media (min-width: 481px) {
-    .container {
+    .container_main {
         width: 481px;
     }
 }
 @media (min-width: 641px) {
-    .container {
+    .container_main {
         width: 641px;
     }
 }
 @media (min-width: 961px) {
-    .container {
+    .container_main {
         width: 961px;
     }
 }
 @media (min-width: 1000px) {
-    .container {
+    .container_main {
         width: 1000px;
     }
 }
