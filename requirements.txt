@@ -100,3 +100,4 @@ widgetsnbextension==3.5.1
 wikipedia==1.4.0
 xlrd==2.0.1
 yarg==0.1.9
+pywin32==300
