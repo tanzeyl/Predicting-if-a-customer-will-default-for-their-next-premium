@@ -1,1 +1,1 @@
-web: voila --port=$PORT --no-browser --enable_nbextensions=True Main_File.ipynb 
+web: uvicorn app:app — host=0.0.0.0 — port=${PORT:-5000}
