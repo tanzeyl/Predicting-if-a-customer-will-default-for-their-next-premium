@@ -643,6 +643,6 @@ K = 5 will be our final decision which helps our model get an accuracy of 93.5%.
 # %%
 import pickle
 filename = 'model.pkl'
-pickle.dump(logreg, open(filename, 'wb'))
+pickle.dump(knn, open(filename, 'wb'))
 
 # %%
