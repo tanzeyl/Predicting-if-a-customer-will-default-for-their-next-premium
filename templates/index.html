@@ -13,6 +13,9 @@
 			<center>
 			<div class="inner-banner-image">
 				<div class="banner-content">
+					<div style="padding-left: 10px; font-family: helvetica;">
+					<article style="color: black; text-align: left; margin-left: 4px; margin-bottom: 10px; margin-top: 0px;">You will get one of these two outputs: <br> a.) 1: Customer will pay their premium on time. <br> b.) 0: Customer will not pay their premium on time. </article></div>
+					<br>
 					<form method = "POST" action="/predict">
 						<table>
 							<tr><th>Input</th><th>Field</th></tr>
@@ -31,7 +34,7 @@
 							<tr><td>Status: </td><td><input type="radio" name="status" value="10"> Poor </td><td><input type="radio" name="status" value="01"> Rich </td></tr>
 						</table>
 						<br>
-						<input type="submit" name="">
+						<input type="submit" class="button">
 					</form>
 				</div>
 			</div>

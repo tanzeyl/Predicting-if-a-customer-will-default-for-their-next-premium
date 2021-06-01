@@ -4,22 +4,14 @@ import numpy as np
 import flask
 import pickle
 import joblib
-from flask import Flask, render_template, requests
+from flask import Flask, render_template, request
 import requests
 
 app=Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
-@app.route("/home", methods=['GET', 'POST'])
 def home():
  return render_template('index.html')
-
-
-def ValuePredictor(to_predict_list):
- to_predict = np.array(to_predict_list).reshape(1,4)
- loaded_model = pickle.load(open("model.pkl","rb"))
- result = loaded_model.predict(to_predict)
- return result[0]
 
 @app.route("/predict",methods = ["GET","POST"])
 def result():
@@ -43,7 +35,7 @@ def result():
    file = open("model.pkl","rb")
    trained_model = joblib.load(file)
    result = trained_model.predict(prediction)
-   return str(result)
+   return str(result[0])
 
 if __name__ == "__main__":
  app.run(debug=True)
