@@ -1,66 +1,47 @@
-{% extends "layout.html" %}
-{% block content %}
-<div class="content-section">
-		<form method="POST" action="">
-			{{ form.hidden_tag() }}
-			<fieldset class="form-group">
-				<legend class="border-bottom mb-4">Enter these values</legend>
-				<div class="form-group">
-					{{ form.id.label(class="form-control-label") }}
-					{{ form.id(class="form-control form-control-lg") }}
-				</div>
-				<div class="form-group">
-					{{ form.perc.label(class="form-control-label") }}
-					{{ form.perc(class="form-control form-control-lg") }}
-				</div>
-				<div class="form-group">
-					{{ form.age.label(class="form-control-label") }}
-					{{ form.age(class="form-control form-control-lg") }}
-				</div>
-				<div class="form-group">
-					{{ form.income.label(class="form-control-label") }}
-					{{ form.income(class="form-control form-control-lg") }}
-				</div>
-				<div class="form-group">
-					{{ form.count1.label(class="form-control-label") }}
-					{{ form.count1(class="form-control form-control-lg") }}
-				</div>
-				<div class="form-group">
-					{{ form.count2.label(class="form-control-label") }}
-					{{ form.count2(class="form-control form-control-lg") }}
-				</div>
-				<div class="form-group">
-					{{ form.count3.label(class="form-control-label") }}
-					{{ form.count3(class="form-control form-control-lg") }}
-				</div>
-				<div class="form-group">
-					{{ form.auc.label(class="form-control-label") }}
-					{{ form.auc(class="form-control form-control-lg") }}
-				</div>
-				<div class="form-group">
-					{{ form.num.label(class="form-control-label") }}
-					{{ form.num(class="form-control form-control-lg") }}
-				</div>
-				<div class="form-group">
-					{{ form.s_channel.label() }}
-					{{ form.s_channel() }}
-				</div>
-				<div class="form-group">
-					{{ form.residence.label() }}
-					{{ form.residence() }}
-				</div>
-				<div class="form-group">
-					{{ form.age_group.label() }}
-					{{ form.age_group() }}
-				</div>
-				<div class="form-group">
-					{{ form.status.label() }}
-					{{ form.status() }}
-				</div>
-			</fieldset>
-			<div class="form-group">
-				{{ form.submit(class="btn btn-outline-info") }}
-			</div>
-		</form>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Premium Payment Prediction</title>
+	<link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+	<div class="header">
+		<h3>Premium Prediction for Upcoming Payments</h3>
 	</div>
-{% endblock content %}
+	<div class="content">
+		<div class="banner-image">
+			<center>
+			<div class="inner-banner-image">
+				<div class="banner-content">
+					<form method = "POST" action="/predict">
+						<table>
+							<tr><th>Input</th><th>Field</th></tr>
+							<tr><td>Customer ID: </td><td><input type="text" name="idd"></td></tr>
+							<tr><td>Percentage Premium Paid In cash: </td><td><input type="text" name="perc"></td></tr>
+							<tr><td>Age In Days: </td><td><input type="text" name="age"></td></tr>
+							<tr><td>Income: </td><td><input type="text" name="income"></td></tr>
+							<tr><td>Count of 3-6 Months Late: </td><td><input type="text" name="count1"></td></tr>
+							<tr><td>Count of 6-12 Months late: </td><td><input type="text" name="count2"></td></tr>
+							<tr><td>Count of More Than 12 Months Late: </td><td><input type="text" name="count3"></td></tr>
+							<tr><td>Application Underwriting Score: </td><td><input type="text" name="auc"></td></tr>
+							<tr><td>Number of Premiums Paid: </td><td><input type="text" name="num"></td></tr>
+							<tr><td>Sourcing Channel: </td><td><input type="radio" name="s_channel" value="10000"> A </td><td><input type="radio" name="s_channel" value="01000"> B </td><td><input type="radio" name="s_channel" value="00100"> C </td><td><input type="radio" name="s_channel" value="00010"> D </td><td><input type="radio" name="s_channel" value="00001"> E </td></tr>
+							<tr><td>Residence: </td><td><input type="radio" name="residence" value="10"> Rural </td><td><input type="radio" name="residence" value="01"> Urban </td></tr>
+							<tr><td>Age Group: </td><td><input type="radio" name="age_group" value="100"> Teenager </td><td><input type="radio" name="age_group" value="010"> Adult </td><td><input type="radio" name="age_group" value="001"> Old </td></tr>
+							<tr><td>Status: </td><td><input type="radio" name="status" value="10"> Poor </td><td><input type="radio" name="status" value="01"> Rich </td></tr>
+						</table>
+						<br>
+						<input type="submit" name="">
+					</form>
+				</div>
+			</div>
+		</center>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<p style="text-align: center;">Copyright © Lifestyle Store. All Rights Reserved | Contact Us: +91 90000 00000</p>
+		</div>
+	</footer>
+</body>
+</html>
