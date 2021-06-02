@@ -32,7 +32,6 @@ Given below:
 #Importing important modules
 import pandas as pd
 import matplotlib.pyplot as plt
-%matplotlib inline
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from scipy.stats import ttest_ind
